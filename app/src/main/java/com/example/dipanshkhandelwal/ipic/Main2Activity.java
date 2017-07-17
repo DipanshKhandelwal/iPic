@@ -13,10 +13,13 @@ public class Main2Activity extends AppCompatActivity {
 
     Button bTakePhoto;
     Button bFromGallery;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        bTakePhoto = (Button) findViewById(R.id.bTakePhoto);
+        bFromGallery = (Button) findViewById(R.id.bFromGallery);
     }
 }

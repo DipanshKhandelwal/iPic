@@ -29,6 +29,13 @@ public class Main2Activity extends AppCompatActivity {
         bTakePhoto = (Button) findViewById(R.id.bTakePhoto);
         bFromGallery = (Button) findViewById(R.id.bFromGallery);
 
+        bTakePhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                takePhoto();
+            }
+        });
+
     }
 
     @Override

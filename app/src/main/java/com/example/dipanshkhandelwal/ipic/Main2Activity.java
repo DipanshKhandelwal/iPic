@@ -36,6 +36,13 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
+        bFromGallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectImageInGallery();
+            }
+        });
+
     }
 
     @Override

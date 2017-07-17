@@ -31,6 +31,29 @@ public class Main2Activity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case REQUEST_TAKE_PHOTO:
+            case REQUEST_SELECT_IMAGE:
+                if (resultCode == RESULT_OK) {
+                    Uri imageUri;
+                    if (data == null || data.getData() == null) {
+                        imageUri = uriPhoto;
+                    } else {
+                        imageUri = data.getData();
+                    }
+                    Intent intent = new Intent();
+                    intent.setData(imageUri);
+                    setResult(RESULT_OK, intent);
+                    finish();
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
     public void takePhoto() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if(intent.resolveActivity(getPackageManager()) != null) {

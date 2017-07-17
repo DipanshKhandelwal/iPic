@@ -15,5 +15,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        bSelectImage = (Button) findViewById(R.id.bSelectImage);
+        ivImage = (ImageView) findViewById(R.id.ivImage);
+
     }
 }
